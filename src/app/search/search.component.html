@@ -1,0 +1,30 @@
+<p>
+  search works!
+</p>
+
+<mat-form-field>
+      <input matInput placeholder="Search something!" type="text"  [(ngModel)]="searchText">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="getUsers()">Search</button>
+  <h1>users : {{searchCount}}</h1>
+  <br/>
+  <ol *ngIf="searchResult">
+
+
+    <!--<li *ngFor="let user of searchResult.items" >{{user.login}}</li> -->
+
+
+    <mat-card class="example-card" *ngFor="let user of searchResult.items">
+        <mat-card-header>
+          <mat-card-title>
+            <button (click)="ShowUserDetail(user)"  mat-button color="primary">{{user.login}}</button>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <img mat-card-image [src]="user.avatar_url" alt="Photo of a Shiba Inu" class="profile-image">
+        </mat-card-content>
+      </mat-card>
+  </ol>
+
+
+

@@ -1,0 +1,15 @@
+.example-card {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  float: left;
+}
+
+.profile-image{
+  width: 100px;
+  height: 100px;
+  float: center;
+}
+mat-card-subtitle{
+  float: center;
+}
